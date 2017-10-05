@@ -1,3 +1,5 @@
+AMP is a Google-backed project with the aim of speeding up the delivery of content through the use of stripped down code known as AMP HTML. This app bulk-validates many URLS.
+
 # Bulk-Amp-Validator
 AMP Validate multiple URLs
 
