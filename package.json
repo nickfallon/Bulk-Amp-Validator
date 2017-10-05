@@ -1,0 +1,14 @@
+{
+  "name": "articles",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node validate.js"
+  },
+  "dependencies": {
+    "amphtml-validator": "^1.0.20"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  }
+}
