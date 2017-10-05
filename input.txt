@@ -1,0 +1,3 @@
+https://ampbyexample.com/
+https://ampbyexample.com/advanced/amp-user-notification_with_server_endpoint/
+https://www.ampproject.org/learn/overview/
