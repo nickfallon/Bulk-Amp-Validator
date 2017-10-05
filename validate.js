@@ -19,13 +19,20 @@ var tally = 0;
 var tot_pass = 0;
 var tot_fail = 0;
 
+//process.on('uncaughtException', function (err) {
+//    console.log(err);
+//}); 
+
 rl.on('line', function(line) {
     total++;
     // for each URL in the input file  
     var url = line;
-    http.get(url, function(res){    
+
+
+    var req = http.get(url, function(res){    
         res.setEncoding('utf8');
         var htmldata = '';
+     
         res.on('data', function(chunk){            
             htmldata += chunk;
         });
@@ -50,10 +57,17 @@ rl.on('line', function(line) {
                         console.log('---------------------------------------------');
                         console.log('Total URLS: ' + total);
                         console.log('Total Failed: ' + tot_fail);
-                        console.log('Total Passed: ' + tot_pass);                    
+                        console.log('Total Passed: ' + tot_pass);    
+                        console.log('---------------------------------------------');
+                        console.log('Results are in output.txt');                
                     }
                 });            
           });
     });
+
+    req.on('error', function(e) {
+        console.log('ERROR' + e);
+    });
+
 });
 
